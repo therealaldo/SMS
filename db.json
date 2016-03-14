@@ -1,0 +1,59 @@
+{
+  "rooms": {
+    "alpha": {
+      "name": "Alpha Room",
+      "members": {
+        "therealaldo": true,
+        "jacobnigh": true
+      },
+      "messages": {
+        "m1": {
+          "sender": "therealaldo",
+          "message": "This is my message in the alpha room",
+          "timestamp": "timestamp of message"
+        },
+        "m2": {
+          "sender": "jacobnigh",
+          "message": "This is another message in the alpha room",
+          "timestamp": "timestamp of message"
+        }
+      }
+    },
+    "bravo": {
+      "name": "Bravo Room",
+      "members": {
+        "therealaldo": true,
+        "jacobnigh": false
+      },
+      "messages": {
+        "m1": {
+          "sender": "therealaldo",
+          "message": "This is my message in the bravo room",
+          "timestamp": "timestamp of message"
+        },
+        "m2": {
+          "sender": "therealaldo",
+          "message": "This is second message in the bravo room",
+          "timestamp": "timestamp of message"
+        }
+      }
+    }
+  },
+
+  "members": {
+    "therealaldo": {
+      "name": "Aldo Gonzalez",
+      "rooms": {
+        "alpha": true,
+        "bravo": true
+      }
+    },
+    "jacobnigh": {
+      "name": "Jacob Nigh",
+      "rooms": {
+        "alpha": true,
+        "bravo": false
+      }
+    }
+  }
+}

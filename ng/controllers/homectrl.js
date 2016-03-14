@@ -5,7 +5,7 @@ angular.module('myapp')
 
   $scope.authObj.$onAuth(function(authData) {
   if (authData) {
-    $scope.user = authData.facebook;
+    $scope.user = authData.facebook.displayName;
     console.log("Logged in as:", authData.uid);
   } else {
     console.log("Logged out");
