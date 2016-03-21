@@ -16,11 +16,11 @@
     "tests"
   ],
   "dependencies": {
-    "angular-route": "^1.5.0",
-    "angular": "^1.5.0",
-    "angular-bootstrap": "^1.2.4",
-    "angularfire": "^1.1.4",
-    "firebase": "^2.4.1",
-    "bootstrap": "^3.3.6"
+    "angular-route": "1.5.0",
+    "angular": "1.5.0",
+    "angular-bootstrap": "1.2.4",
+    "angularfire": "1.1.4",
+    "firebase": "2.4.1",
+    "bootstrap": "3.3.6"
   }
 }

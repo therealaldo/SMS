@@ -1,0 +1,59 @@
+<header class='container-fluid'>
+  <nav class='row'>
+    <p class=''><img src='../assets/images/sportwars_logo.svg' alt='sport wars logo'>Sportwars</p>
+    <ul class=''>
+      <li>Lobby</li>
+      <div class="dropdown">
+        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+          {{ user }}
+          <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu">
+          <li><a href="#">Add Funds</a></li>
+          <li><a href="#">Withdraw</a></li>
+          <li><a href="#">Transactions History</a></li>
+          <li><a href="#">Refer a friend</a></li>
+          <li><a href="/" ng-click='authObj.$unauth()'>Logout</a></li>
+        </ul>
+      </div>
+    </ul>
+  </nav>
+  <section class='row'>
+    <span>Featured Game</span>
+    <h2>$300K CBB Survive the Madness</h2>
+    <p><a href='#'>Play Now</a></p>
+  </section>
+</header>
+<main class='container-fluid'>
+  <section class='row'>
+    <table class='table'>
+      <thead>
+        <tr class='row'>
+          <th>Sport</th>
+          <th>Contest</th>
+          <th>Entries / Size</th>
+          <th>Prizes</th>
+          <th>Entry</th>
+          <th>Starts (ET)</th>
+          <th>Available</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class='row'>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+  <section class='row'>
+    <h2>Download our mobile app to play on the go</h2>
+    <p>Available on the App Store</p>
+    <p>Android App on Google Play</p>
+  </section>
+</main>

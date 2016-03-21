@@ -2,8 +2,18 @@
   <head>
     <base href='/'></base>
     <title>App</title>
+    <!--Stylesheets-->
+    <link rel='stylesheet' href='bower/bootstrap/dist/css/bootstrap.min.css' />
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel='stylesheet' href='css/style.css' />
+    <!--Meta Tags-->
+    <meta lang='en'>
     <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no'>
+    <!--Scripts-->
+    <script src='bower/jquery/dist/jquery.js'></script>
     <script src='bower/angular/angular.min.js'></script>
+    <script src='bower/bootstrap/dist/js/bootstrap.min.js'></script>
     <script src='bower/angular-bootstrap/ui-bootstrap-tpls.min.js'></script>
     <script src='bower/firebase/firebase.js'></script>
     <script src='bower/angular-route/angular-route.min.js'></script>
@@ -11,7 +21,38 @@
     <script src='js/main.js'></script>
   </head>
   <body>
-    <h1>home</h1>
     <ng-view></ng-view>
+    <footer class='container-fluid'>
+      <div class='row'>
+        <ul class='col-xs-3'>
+          <li>About</li>
+          <li><a href='#'>Sportwars</a></li>
+          <li><a href='#'>Careers</a></li>
+          <li><a href='#'>Press &#38; Media</a></li>
+        </ul>
+        <ul class='col-xs-3'>
+          <li>Help</li>
+          <li><a href='#'>Support</a></li>
+          <li><a href='#'>Rules &#38; Scoring</a></li>
+          <li><a href='#'>Trust &#38; Safety</a></li>
+        </ul>
+        <ul class='col-xs-3'>
+          <li>More</li>
+          <li><a href='#'>Privacy Policy</a></li>
+          <li><a href='#'>Affiliates</a></li>
+          <li><a href='#'>Terms of Service</a></li>
+        </ul>
+        <ul class='col-xs-3 text-right'>
+          <li>Sportwars Inc.</li>
+          <li>Orlando, Fl</li>
+          <li><span>Facebook</span></li>
+          <li><span>Twitter</span></li>
+          <li><span>Instagram</span></li>
+        </ul>
+      </div>
+      <div class='row'>
+        <p class='col-xs-12 text-center'>Copyright &#169; 2015 by Sportwars Inc. - All Rights Reserved</p>
+      </div>
+    </footer>
   </body>
 </html>

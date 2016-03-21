@@ -1,7 +1,11 @@
 {
-  "rooms": {
+  "contests": {
     "alpha": {
-      "name": "Alpha Room",
+      "name": "$300K CBB Survive the Madness",
+      "size": 3448,
+      "prizes": 300000,
+      "entry": 100,
+      "start": "Thu 12:15PM",
       "members": {
         "therealaldo": true,
         "jacobnigh": true
@@ -20,7 +24,172 @@
       }
     },
     "bravo": {
-      "name": "Bravo Room",
+      "name": "$225K Wed NBA Slam",
+      "size": 3448,
+      "prizes": 225000,
+      "entry": 25,
+      "start": "7:00PM",
+      "members": {
+        "therealaldo": true,
+        "jacobnigh": false
+      },
+      "messages": {
+        "m1": {
+          "sender": "therealaldo",
+          "message": "This is my message in the bravo room",
+          "timestamp": "timestamp of message"
+        },
+        "m2": {
+          "sender": "therealaldo",
+          "message": "This is second message in the bravo room",
+          "timestamp": "timestamp of message"
+        }
+      }
+    },
+    "charlie": {
+      "name": "$225K Wed NBA Shot",
+      "size": 3448,
+      "prizes": 225000,
+      "entry": 2,
+      "start": "7:00PM",
+      "members": {
+        "therealaldo": true,
+        "jacobnigh": false
+      },
+      "messages": {
+        "m1": {
+          "sender": "therealaldo",
+          "message": "This is my message in the bravo room",
+          "timestamp": "timestamp of message"
+        },
+        "m2": {
+          "sender": "therealaldo",
+          "message": "This is second message in the bravo room",
+          "timestamp": "timestamp of message"
+        }
+      }
+    },
+    "delta": {
+      "name": "$25K Wed NBA Dunk",
+      "size": 3448,
+      "prizes": 25000,
+      "entry": 100,
+      "start": "7:00PM",
+      "members": {
+        "therealaldo": true,
+        "jacobnigh": false
+      },
+      "messages": {
+        "m1": {
+          "sender": "therealaldo",
+          "message": "This is my message in the bravo room",
+          "timestamp": "timestamp of message"
+        },
+        "m2": {
+          "sender": "therealaldo",
+          "message": "This is second message in the bravo room",
+          "timestamp": "timestamp of message"
+        }
+      }
+    },
+    "echo": {
+      "name": "$15K Wed NBA Rebound",
+      "size": 3448,
+      "prizes": 15000,
+      "entry": 10,
+      "start": "7:00PM",
+      "members": {
+        "therealaldo": true,
+        "jacobnigh": false
+      },
+      "messages": {
+        "m1": {
+          "sender": "therealaldo",
+          "message": "This is my message in the bravo room",
+          "timestamp": "timestamp of message"
+        },
+        "m2": {
+          "sender": "therealaldo",
+          "message": "This is second message in the bravo room",
+          "timestamp": "timestamp of message"
+        }
+      }
+    },
+    "foxtrot": {
+      "name": "$1500 WED CBB Blue Chip",
+      "size": 3448,
+      "prizes": 1500,
+      "entry": 100,
+      "start": "7:00PM",
+      "members": {
+        "therealaldo": true,
+        "jacobnigh": false
+      },
+      "messages": {
+        "m1": {
+          "sender": "therealaldo",
+          "message": "This is my message in the bravo room",
+          "timestamp": "timestamp of message"
+        },
+        "m2": {
+          "sender": "therealaldo",
+          "message": "This is second message in the bravo room",
+          "timestamp": "timestamp of message"
+        }
+      }
+    },
+    "golf": {
+      "name": "$10K Wed NBA Power Rebound",
+      "size": 3448,
+      "prizes": 10000,
+      "entry": 10,
+      "start": "7:00PM",
+      "members": {
+        "therealaldo": true,
+        "jacobnigh": false
+      },
+      "messages": {
+        "m1": {
+          "sender": "therealaldo",
+          "message": "This is my message in the bravo room",
+          "timestamp": "timestamp of message"
+        },
+        "m2": {
+          "sender": "therealaldo",
+          "message": "This is second message in the bravo room",
+          "timestamp": "timestamp of message"
+        }
+      }
+    },
+    "hotel": {
+      "name": "$20K Wed NBA Dribbler",
+      "size": 3448,
+      "prizes": 20000,
+      "entry": 2,
+      "start": "7:00PM",
+      "members": {
+        "therealaldo": true,
+        "jacobnigh": false
+      },
+      "messages": {
+        "m1": {
+          "sender": "therealaldo",
+          "message": "This is my message in the bravo room",
+          "timestamp": "timestamp of message"
+        },
+        "m2": {
+          "sender": "therealaldo",
+          "message": "This is second message in the bravo room",
+          "timestamp": "timestamp of message"
+        }
+      }
+    },
+    "india": {
+      "name": "$15K Wed NBA Block",
+      "size": 3448,
+      "prizes": 15000,
+      "entry": 1,
+      "start": "7:00PM",
       "members": {
         "therealaldo": true,
         "jacobnigh": false

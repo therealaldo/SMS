@@ -1,0 +1,228 @@
+/**
+ * Sportwars CSS Table of Contest
+ * ------------------------------------------------------------
+ * General
+ * Home
+ * Lobby
+ * Profile
+ * Contest
+ * Footer
+ * ------------------------------------------------------------
+ *
+ */
+
+
+/**
+ * GENERAL STYLES
+ * ------------------------------------------------------------
+ */
+@font-face {
+  font-family: 'Promesh';
+  src: url('../assets/fonts/PROMESH-REgular.ttf');
+}
+html, body {
+  font: 62.5%/1.4 'Open Sans', Helvetica, sans-serif;
+  max-width: 100%;
+}
+h1, h2, h3, h4, h5 {
+  font-family: 'Promesh';
+}
+h1 {
+  font-size: 4.8rem;
+}
+h2 {
+  font-size: 3.6rem;
+}
+h3 {
+  font-size: 3rem;
+}
+h4 {
+  font-size: 2.4rem;
+}
+h5, h6 {
+  font-size: 1.8rem;
+}
+ul {
+  list-style: none;
+}
+section {
+  padding: 6rem 4rem;
+  font-size: 1.8rem;
+}
+
+
+/**
+ * HOME PAGE STYLES
+ * ------------------------------------------------------------
+ */
+a.logo {
+  text-indent: -9999px;
+  background: url('../assets/images/sportwars_logo.svg') no-repeat center center;
+  width: 22rem;
+  height: 5.1rem;
+  display: block;
+  margin-top: 2.5rem;
+}
+nav.row {
+  padding: 0rem 40px;
+  background: #22313f;
+}
+nav.row ul li {
+  font-family: 'Promesh';
+  font-size:
+}
+nav.row ul li {
+  margin-top: 2.8rem;
+}
+nav.row ul li a {
+  color: #e9e9e9;
+  font-size: 2.2rem;
+}
+nav.row ul li a:hover, nav.row ul li a:active {
+  text-decoration: none;
+  color: #dbd5d5;
+}
+section.jumbotron {
+  font-family: 'Promesh';
+  background: url('../assets/images/jumbotron.jpg') no-repeat center top;
+  background-size: cover;
+  padding-top: 33.7rem;
+  color: #e9e9e9;
+  margin-bottom: 0;
+}
+section.jumbotron h3 {
+  margin-bottom: 20px;
+}
+section.jumbotron h3 span {
+  color: #efbe14;
+}
+button.playnow {
+  background: #efbe14;
+  border: none;
+  font-size: 2.2rem;
+  font-family: 'Promesh';
+}
+button.playnow:hover {
+  background: #e6b50d;
+  cursor: pointer;
+}
+button.playnow a {
+  display: inline-block;
+  color: #333;
+  padding: 10px 0;
+}
+button.playnow a:hover, button.playnow a:active {
+  text-decoration: none;
+}
+section.desc div h2 {
+  margin-bottom: 3rem;
+}
+section.process {
+  background: #22313f;
+  color: #e9e9e9;
+}
+section.process img {
+  margin-bottom: 4rem;
+}
+section.process h2 {
+  margin-bottom: 2rem;
+}
+section.featured {
+  background: #25a65b;
+  padding: 1rem 4rem;
+  color: #e9e9e9;
+}
+section.featured div span {
+  margin-bottom: 0;
+  color: #efbe14;
+  font-family: 'Promesh';
+  font-size: 1.6rem;
+}
+section.featured button.playnow {
+  margin-top: 1.7rem;
+}
+
+
+/**
+ * LOBBY PAGE STYLES
+ * ------------------------------------------------------------
+ */
+
+
+
+/**
+ * PROFILE PAGE STYLES
+ * ------------------------------------------------------------
+ */
+
+
+
+/**
+ * CONTEST PAGE STYLES
+ * ------------------------------------------------------------
+ */
+
+
+
+/**
+ * FOOTER STYLES
+ * ------------------------------------------------------------
+ */
+footer {
+  position: relative;
+  font-size: 1.6rem;
+  bottom: 0;
+  background: #333;
+  color: #e9e9e9;
+  border-top: 1rem solid #e9e9e9
+}
+footer > div {
+  padding: 2rem 4rem 0;
+}
+footer a:link, footer a:visited, footer a:hover, footer a:active {
+  color: #e9e9e9;
+}
+footer ul {
+  margin-top: 2rem;
+}
+footer ul li:first-child {
+  font-family: 'Promesh';
+  margin-bottom: 1.2rem;
+}
+footer ul:not(:last-child) li:nth-child(n+2) {
+  margin-bottom: 1rem;
+}
+footer ul:last-child li:first-child {
+  font-size: 2.4rem;
+  margin-bottom: 0;
+}
+footer ul:last-child li:nth-child(2) {
+  font-family: 'Promesh';
+  margin-bottom: 2rem;
+}
+footer ul:last-child li:nth-child(n+3) {
+  display: inline-block;
+  height: 3rem;
+  width: 3rem;
+  border-radius: 50%;
+  margin-left: .5rem;
+}
+footer ul:last-child li:nth-child(n+3):hover {
+  cursor: pointer;
+}
+footer ul:last-child li:nth-child(n+3) span {
+  display: none;
+}
+footer ul:last-child li:nth-child(3) {
+  background: url('../assets/images/fb.png') no-repeat center center;
+}
+footer ul:last-child li:nth-child(4) {
+  background: url('../assets/images/tw.png') no-repeat center center;
+}
+footer ul:last-child li:nth-child(5) {
+  background: url('../assets/images/ig.png') no-repeat center center;
+}
+footer div:last-child {
+  margin: 3rem 0 0;
+  font-size: 1.4rem;
+}
