@@ -14,7 +14,7 @@ angular.module('myapp')
     templateUrl: 'views/profile.html',
     controller: 'ProfileCtrl'
   })
-  .when('/contest', {
+  .when('/contest/:id', {
     templateUrl: 'views/contest.html',
     controller: 'ContestCtrl'
   })

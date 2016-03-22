@@ -16,7 +16,7 @@ angular.module('myapp')
     templateUrl: 'views/profile.html',
     controller: 'ProfileCtrl'
   })
-  .when('/contest', {
+  .when('/contest/:id', {
     templateUrl: 'views/contest.html',
     controller: 'ContestCtrl'
   })
@@ -24,20 +24,44 @@ angular.module('myapp')
 }]);
 
 angular.module('myapp')
-.controller('ContestCtrl', ["$scope", "$firebaseAuth", "$location", function($scope, $firebaseAuth, $location) {
+.controller('ContestCtrl', ["$scope", "$firebaseAuth", "$location", "$routeParams", "$firebaseArray", function($scope, $firebaseAuth, $location, $routeParams, $firebaseArray) {
   var ref = new Firebase('https://sportwarssms.firebaseio.com');
   $scope.authObj = $firebaseAuth(ref);
+
+  var id = $routeParams.id;
+  var specificRef = new Firebase('https://sportwarssms.firebaseio.com/contests/' + id);
+  var contestData = $firebaseArray(specificRef);
+
+  var msgRef = new Firebase('https://sportwarssms.firebaseio.com/contests/' + id + '/messages');
+  var msgData = $firebaseArray(msgRef);
 
   $scope.authObj.$onAuth(function(authData) {
     if (authData) {
       $scope.user = authData.facebook.displayName;
       console.log("Logged in as:", authData.uid);
+
+      $scope.game = contestData;
+      $scope.messages = msgData;
+      $scope.newMessage = {};
+      $scope.newMessage.username = $scope.user;
+      $scope.newMessage.userid = authData.uid;
+
     } else {
       console.log("Logged out");
       $scope.user = false;
       $location.path('/');
     }
   });
+
+  $scope.addMessage = function() {
+    msgData.$add($scope.newMessage).then(function() {
+      console.log('Message successfully added');
+      $scope.newMessage.text = '';
+    }).catch(function(e) {
+      console.log('Error adding message: ', e);
+    })
+  }
+
 }]);
 
 angular.module('myapp')
@@ -67,20 +91,28 @@ angular.module('myapp')
 }]);
 
 angular.module('myapp')
-.controller('LobbyCtrl', ["$scope", "$firebaseAuth", "$location", function($scope, $firebaseAuth, $location) {
+.controller('LobbyCtrl', ["$scope", "$firebaseAuth", "$location", "$firebaseArray", function($scope, $firebaseAuth, $location, $firebaseArray) {
   var ref = new Firebase('https://sportwarssms.firebaseio.com');
   $scope.authObj = $firebaseAuth(ref);
+
+  var contestRef = new Firebase('https://sportwarssms.firebaseio.com/contests');
+  var contestList = $firebaseArray(contestRef);
 
   $scope.authObj.$onAuth(function(authData) {
     if (authData) {
       $scope.user = authData.facebook.displayName;
       console.log("Logged in as:", authData.uid);
+
+      $scope.list = contestList;
+      console.log($scope.list);
     } else {
       console.log("Logged out");
       $scope.user = false;
       $location.path('/');
     }
   });
+
+
 }]);
 
 angular.module('myapp')

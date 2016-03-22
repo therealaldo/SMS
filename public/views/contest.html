@@ -24,71 +24,71 @@
   </nav>
 </header>
 <main class='container-fluid'>
-  <section class='row'>
-    <h2 class='col-xs-12'>$225K WED NBA Slam</h2>
+  <section class='row contest'>
+    <h2 class='col-xs-12'>{{ game[0].name }}</h2>
     <div class='row'>
       <div class='col-xs-3'>
-        <h5>Total Entries</h5>
-        <h3>2,031 People</h3>
+        <h5>Size</h5>
+        <h3>{{ game[0].size }}</h3>
       </div>
       <div class='col-xs-3'>
         <h5>Entry Fee</h5>
-        <h3>$25</h3>
+        <h3>{{ game[0].entry | currency }}</h3>
       </div>
       <div class='col-xs-3'>
         <h5>Prizes</h5>
-        <h3></h3>
+        <h3>{{ game[0].prizes | currency }}</h3>
       </div>
       <div class='col-xs-3'>
         <h5>Salary</h5>
-        <h3></h3>
+        <h3>$60,000</h3>
       </div>
     </div>
     <div class='row'>
       <div class='col-xs-3'>
         <h5>Starts (ET)</h5>
-        <h3></h3>
+        <h3>{{ game[0].start }}</h3>
       </div>
       <div class='col-xs-3'>
         <h5>Contest Type</h5>
-        <h3></h3>
+        <h3>Tournament</h3>
       </div>
       <div class='col-xs-3'>
         <h5>Your Entries</h5>
-        <h3></h3>
+        <h3>1</h3>
       </div>
       <div class='col-xs-3'>
         <h5>AVG. Salary Per Player</h5>
-        <h3></h3>
+        <h3>$6,667</h3>
       </div>
     </div>
   </section>
-  <section class='row'>
+  <section class='row participants'>
     <h3>Participants</h3>
     <ul>
-      <li>Aldo G.</li>
-      <li>Barack O.</li>
-      <li>Michael J.</li>
-      <li>Donald T.</li>
-      <li>Brad B.</li>
+      <li class='col-xs-2 text-center'>Aldo G.</li>
+      <li class='col-xs-2 text-center'>Barack O.</li>
+      <li class='col-xs-2 text-center'>Michael J.</li>
+      <li class='col-xs-2 text-center'>Donald T.</li>
+      <li class='col-xs-2 text-center'>Brad B.</li>
+      <li class='col-xs-2 text-center'>Chuck N.</li>
     </ul>
   </section>
   <section class='row'>
     <section class='trashtalk col-lg-6'>
-      <h3>Trash Talk</h3>
-      <div>
-        <p><strong></strong><p>
+      <h3 class='col-xs-12'>Trash Talk</h3>
+      <div class='chat col-xs-10 col-xs-offset-1'>
+        <p ng-if='messages == false'>There's no messages currently. Talk some trash!</p>
+        <p ng-if='messages' ng-repeat='message in messages'><strong>{{ message.username }}: </strong>{{ message.text }}<p>
       </div>
-      <div>
-        <form>
-          <input type='text' name='userMessage' />
-        </form>
-      </div>
+      <form class='msginput col-xs-10 col-xs-offset-1' ng-submit='addMessage()'>
+        <input type='text' name='userMessage' ng-model='newMessage.text' />
+      </form>
     </section>
     <section class='mobilead col-lg-6'>
-      <h2>Download our mobile app to play on the go</h2>
-      <p>Available on the app store</p>
-      <p>Android app on Google play</p>
+      <h2 class=' col-xs-10 col-xs-offset-1 text-center'>Download our mobile app to play on the go</h2>
+      <p class='col-xs-5 col-xs-offset-1'><span>Available on the app store</span></p>
+      <p class='col-xs-5'><span>Android app on Google play</span></p>
     </section>
   </section>
   <section class='row featured'>

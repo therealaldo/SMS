@@ -35,9 +35,8 @@
     <table class='table'>
       <thead>
         <tr class='row'>
-          <th>Sport</th>
           <th>Contest</th>
-          <th>Entries / Size</th>
+          <th>Size</th>
           <th>Prizes</th>
           <th>Entry</th>
           <th>Starts (ET)</th>
@@ -45,14 +44,13 @@
         </tr>
       </thead>
       <tbody>
-        <tr class='row'>
-          <td></td>
-          <td>$300K CBB Survive the Madness</td>
-          <td>1448 / 2031</td>
-          <td>$300,000</td>
-          <td>$100</td>
-          <td>Thu 12:15PM</td>
-          <td><button><a href='#'>Play</a></button></td>
+        <tr class='row' ng-repeat='contest in list'>
+          <td>{{ contest.gameData.name }}</td>
+          <td>{{ contest.gameData.size }}</td>
+          <td>{{ contest.gameData.prizes }}</td>
+          <td>{{ contest.gameData.entry }}</td>
+          <td>{{ contest.gameData.start }}</td>
+          <td><button><a ng-href='/contest/{{ contest.$id }}'>Play</a></button></td>
         </tr>
       </tbody>
     </table>
