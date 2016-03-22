@@ -1,0 +1,91 @@
+<header class='container-fluid'>
+  <nav class='row'>
+    <p class='col-xs-3'><a href='/' class='logo'>Sportwars</a></p>
+    <ul class='col-xs-3 col-xs-offset-6 text-right'>
+      <li><a href='/lobby'>Lobby</a></li>
+      <li class='dropdown'>
+        <button class='btn btn-default dropdown-toggle' type='button' id='dropdownMenu1'
+        data-toggle='dropdown' aria-haspopup='true' aria-expanded='true'>
+          {{ user }}
+          <span class='caret'></span>
+        </button>
+        <ul class='dropdown-menu' aria-labelledby='dropdownMenu1'>
+          <li class='dropdown-header'>Finances</li>
+          <li><a href='#'>Add Funds</a></li>
+          <li><a href='#'>Withdraw</a></li>
+          <li><a href='#'>Transactions</a></li>
+          <li class='dropdown-header'>Account</li>
+          <li><a href='/profile'>View Profile</a></li>
+          <li><a href='#'>Refer a Friend</a></li>
+          <li><a href='#' ng-click='authObj.$unauth()'>Logout</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+</header>
+<main class='container-fluid'>
+  <section class='profile'>
+    <h2>Profile</h2>
+    <div class='row'>
+      <img src='../assets/images/avatar.png' alt='Aldo Gonzalez' class='col-xs-3'>
+      <div class='row col-xs-6'>
+        <div class='row'>
+          <div class='col-xs-5'>
+            <h5>Name</h5>
+            <h3>{{ user }}</h3>
+          </div>
+          <div class='col-xs-5 col-xs-offset-2'>
+            <h5>Funds</h5>
+            <h3>$1000</h3>
+          </div>
+        </div>
+        <div class='row'>
+          <div class='col-xs-5'>
+            <h5>Email</h5>
+            <h3>aldog212@gmail.com</h3>
+          </div>
+          <div class='col-xs-5 col-xs-offset-2'>
+            <h5>Most Played Sport</h5>
+            <h3>Soccer</h3>
+          </div>
+        </div>
+        <div class='row'>
+          <div class='col-xs-5'>
+            <h5>Country</h5>
+            <h3>United States</h3>
+          </div>
+          <div class='col-xs-5 col-xs-offset-2'>
+            <h5>Most Picked Player</h5>
+            <h3>L. Messi</h3>
+          </div>
+        </div>
+      </div>
+      <div class='row col-xs-3'>
+        <ul class='text-center'>
+          <li><a href='#'>Add Funds</a></li>
+          <li><a href='#'>Withdraw</a></li>
+          <li><a href='#'>Transactions</a></li>
+          <li><a href='#'>Refer a Friend</a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <section class='row badges'>
+    <h3 class='col-xs-12'>Badges</h3>
+    <ul>
+      <li class='col-xs-2 text-center'>Referral Star</li>
+      <li class='col-xs-2 text-center'>Closer</li>
+      <li class='col-xs-2 text-center'>Champion</li>
+      <li class='col-xs-2 text-center'>Fat Wallet</li>
+      <li class='col-xs-2 text-center'>Registry</li>
+      <li class='col-xs-2 text-center'>Underdog</li>
+    </ul>
+  </section>
+  <section class='row featured'>
+    <div class='col-xs-6 row'>
+      <span class='col-xs-12'>&#9733; Featured Game</span>
+      <h2 class='col-xs-12'>$300K CBB Survive the Madness</h2>
+    </div>
+    <button class='col-xs-4 col-xs-offset-2 playnow'><a href='#' ng-click='loginFacebook()'>Play Now</a></button>
+  </section>
+</main>

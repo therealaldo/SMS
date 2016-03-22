@@ -10,7 +10,7 @@ angular.module('myapp')
     templateUrl: 'views/lobby.html',
     controller: 'LobbyCtrl'
   })
-  .when('/account', {
+  .when('/profile', {
     templateUrl: 'views/profile.html',
     controller: 'ProfileCtrl'
   })

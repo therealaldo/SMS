@@ -1,5 +1,5 @@
 angular.module('myapp')
-.controller('ContestCtrl', function($scope, $firebaseAuth) {
+.controller('ContestCtrl', function($scope, $firebaseAuth, $location) {
   var ref = new Firebase('https://sportwarssms.firebaseio.com');
   $scope.authObj = $firebaseAuth(ref);
 
@@ -10,6 +10,7 @@ angular.module('myapp')
     } else {
       console.log("Logged out");
       $scope.user = false;
+      $location.path('/');
     }
   });
 });

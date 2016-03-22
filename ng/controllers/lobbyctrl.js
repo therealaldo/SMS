@@ -10,6 +10,7 @@ angular.module('myapp')
     } else {
       console.log("Logged out");
       $scope.user = false;
+      $location.path('/');
     }
   });
 });

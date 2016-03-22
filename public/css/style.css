@@ -1,20 +1,22 @@
 /**
- * Sportwars CSS Table of Contest
- * ------------------------------------------------------------
+ * Sportwars CSS Table of Contents
+ * -------------------------------------------------------------------------------------------------
  * General
+ * Navigation
  * Home
  * Lobby
  * Profile
  * Contest
  * Footer
- * ------------------------------------------------------------
+ * -------------------------------------------------------------------------------------------------
  *
  */
 
 
+
 /**
  * GENERAL STYLES
- * ------------------------------------------------------------
+ * -------------------------------------------------------------------------------------------------
  */
 @font-face {
   font-family: 'Promesh';
@@ -40,7 +42,7 @@ h4 {
   font-size: 2.4rem;
 }
 h5, h6 {
-  font-size: 1.8rem;
+  font-size: 1.6rem;
 }
 ul {
   list-style: none;
@@ -49,39 +51,77 @@ section {
   padding: 6rem 4rem;
   font-size: 1.8rem;
 }
+a:link, a:visited {
+  text-decoration: none;
+}
+
+
+
+/**
+ * NAVIGATION STYLES
+ * -------------------------------------------------------------------------------------------------
+ */
+ a.logo {
+   text-indent: -9999px;
+   background: url('../assets/images/sportwars_logo.svg') no-repeat center center;
+   width: 22rem;
+   height: 5.1rem;
+   display: block;
+   margin-top: 2.5rem;
+ }
+ nav.row {
+   padding: 0rem 40px;
+   background: #22313f;
+ }
+ nav.row ul > li {
+   font-family: 'Promesh';
+   margin-top: 2.5rem;
+   display: inline-block;
+   margin-left: 2rem;
+ }
+ nav.row button.btn {
+   margin-bottom: .7rem;
+   background: none;
+   font-size: 2.2rem;
+   border: none;
+   color: #e9e9e9;
+ }
+ nav.row ul li a {
+   color: #e9e9e9;
+   font-size: 2.2rem;
+ }
+ nav.row ul li a:hover, nav.row ul li a:active, nav.row button.btn:hover,
+ nav.row button.btn:active {
+   text-decoration: none;
+   color: #dbd5d5;
+ }
+ li.dropdown:hover ul.dropdown-menu {
+   display: block;
+ }
+ nav.row ul.dropdown-menu {
+   min-width: 10rem;
+ }
+ nav.row ul.dropdown-menu li {
+   margin: 0;
+   width: 100%;
+ }
+ nav.row ul.dropdown-menu li.dropdown-header {
+   margin-top: 1rem;
+ }
+ nav.row ul.dropdown-menu li a {
+   font-family: 'Open Sans';
+   font-size: 1.6rem;
+   margin-top: 0;
+   color: #333;
+   min-width: 100%;
+ }
+
 
 
 /**
  * HOME PAGE STYLES
- * ------------------------------------------------------------
+ * -------------------------------------------------------------------------------------------------
  */
-a.logo {
-  text-indent: -9999px;
-  background: url('../assets/images/sportwars_logo.svg') no-repeat center center;
-  width: 22rem;
-  height: 5.1rem;
-  display: block;
-  margin-top: 2.5rem;
-}
-nav.row {
-  padding: 0rem 40px;
-  background: #22313f;
-}
-nav.row ul li {
-  font-family: 'Promesh';
-  font-size:
-}
-nav.row ul li {
-  margin-top: 2.8rem;
-}
-nav.row ul li a {
-  color: #e9e9e9;
-  font-size: 2.2rem;
-}
-nav.row ul li a:hover, nav.row ul li a:active {
-  text-decoration: none;
-  color: #dbd5d5;
-}
 section.jumbotron {
   font-family: 'Promesh';
   background: url('../assets/images/jumbotron.jpg') no-repeat center top;
@@ -143,30 +183,103 @@ section.featured button.playnow {
 }
 
 
+
 /**
  * LOBBY PAGE STYLES
- * ------------------------------------------------------------
+ * -------------------------------------------------------------------------------------------------
  */
 
 
 
 /**
  * PROFILE PAGE STYLES
- * ------------------------------------------------------------
+ * -------------------------------------------------------------------------------------------------
  */
+section.profile, section.badges {
+  padding: 4rem;
+}
+section.profile h2 {
+  margin-bottom: 2.5rem;
+}
+section.profile h5 {
+  color: #666;
+}
+section.profile h3 {
+  margin: 0 0 4rem;
+  color: #333;
+}
+section.profile ul {
+  margin: 0;
+  padding: .5rem 0 0;
+  font-family: 'Promesh';
+}
+section.profile ul li a {
+  display: block;
+  color: #e9e9e9;
+  background: #333;
+  margin-bottom: 2rem;
+  padding: 1.5rem 0;
+}
+section.profile ul li a:hover, section.profile ul li a:active {
+  background: #222;
+}
+section.profile ul li:first-child a {
+  background: #25a65b;
+}
+section.profile ul li:first-child a:hover, section.profile ul li:first-child a:active {
+  background: #1f9952;
+}
+section.badges {
+  background: #22313f;
+  color: #e9e9e9;
+  font-family: 'Promesh';
+}
+section.badges h3 {
+  margin-bottom: 6rem;
+}
+section.badges ul {
+  margin: 0;
+  padding: 0;
+  font-size: 2.2rem;
+}
+section.badges ul li::before {
+  content: '';
+  display: block;
+  width: 17rem;
+  height: 17.5rem;
+  margin: 0 auto 2rem 7%;
+}
+section.badges ul li:first-child::before {
+  background: url('../assets/images/referralstar.png') no-repeat center center;
+}
+section.badges ul li:nth-child(2)::before {
+  background: url('../assets/images/closer.png') no-repeat center center;
+}
+section.badges ul li:nth-child(3)::before {
+  background: url('../assets/images/champion.png') no-repeat center center;
+}
+section.badges ul li:nth-child(4)::before {
+  background: url('../assets/images/wallet.png') no-repeat center center;
+}
+section.badges ul li:nth-child(5)::before {
+  background: url('../assets/images/star.png') no-repeat center center;
+}
+section.badges ul li:last-child::before {
+  background: url('../assets/images/underdog.png') no-repeat center center;
+}
 
 
 
 /**
  * CONTEST PAGE STYLES
- * ------------------------------------------------------------
+ * -------------------------------------------------------------------------------------------------
  */
 
 
 
 /**
  * FOOTER STYLES
- * ------------------------------------------------------------
+ * -------------------------------------------------------------------------------------------------
  */
 footer {
   position: relative;

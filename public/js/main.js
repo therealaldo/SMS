@@ -12,7 +12,7 @@ angular.module('myapp')
     templateUrl: 'views/lobby.html',
     controller: 'LobbyCtrl'
   })
-  .when('/account', {
+  .when('/profile', {
     templateUrl: 'views/profile.html',
     controller: 'ProfileCtrl'
   })
@@ -24,7 +24,7 @@ angular.module('myapp')
 }]);
 
 angular.module('myapp')
-.controller('ContestCtrl', ["$scope", "$firebaseAuth", function($scope, $firebaseAuth) {
+.controller('ContestCtrl', ["$scope", "$firebaseAuth", "$location", function($scope, $firebaseAuth, $location) {
   var ref = new Firebase('https://sportwarssms.firebaseio.com');
   $scope.authObj = $firebaseAuth(ref);
 
@@ -35,6 +35,7 @@ angular.module('myapp')
     } else {
       console.log("Logged out");
       $scope.user = false;
+      $location.path('/');
     }
   });
 }]);
@@ -77,12 +78,13 @@ angular.module('myapp')
     } else {
       console.log("Logged out");
       $scope.user = false;
+      $location.path('/');
     }
   });
 }]);
 
 angular.module('myapp')
-.controller('AccountCtrl', ["$scope", "$firebaseAuth", function($scope, $firebaseAuth) {
+.controller('ProfileCtrl', ["$scope", "$firebaseAuth", "$location", function($scope, $firebaseAuth, $location) {
   var ref = new Firebase('https://sportwarssms.firebaseio.com');
   $scope.authObj = $firebaseAuth(ref);
 
@@ -93,6 +95,7 @@ angular.module('myapp')
     } else {
       console.log("Logged out");
       $scope.user = false;
+      $location.path('/');
     }
   });
 }]);
