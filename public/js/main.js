@@ -24,7 +24,8 @@ angular.module('myapp')
 }]);
 
 angular.module('myapp')
-.controller('ContestCtrl', ["$scope", "$firebaseAuth", "$location", "$routeParams", "$firebaseArray", function($scope, $firebaseAuth, $location, $routeParams, $firebaseArray) {
+.controller('ContestCtrl',
+["$scope", "$firebaseAuth", "$location", "$routeParams", "$firebaseArray", "$firebaseObject", function($scope, $firebaseAuth, $location, $routeParams, $firebaseArray, $firebaseObject) {
   var ref = new Firebase('https://sportwarssms.firebaseio.com');
   $scope.authObj = $firebaseAuth(ref);
 
@@ -46,6 +47,23 @@ angular.module('myapp')
       $scope.newMessage.username = $scope.user;
       $scope.newMessage.userid = authData.uid;
 
+      var userRef = new Firebase('https://sportwarssms.firebaseio.com/members/' + authData.uid);
+      var user = $firebaseObject(userRef);
+
+      user.$loaded(function(data) {
+        if(data.badges.champion == false && contestData[0].featured == true) {
+          console.log(data.badges);
+          user.badges.champion = true;
+
+          user.$save().then(function(data) {
+            console.log('Badge was successfully changed.');
+            $scope.show = true;
+          }).catch(function() {
+            console.log('Badge was unsuccessfully changed.');
+          });
+        }
+      });
+
     } else {
       console.log("Logged out");
       $scope.user = false;
@@ -61,6 +79,10 @@ angular.module('myapp')
       console.log('Error adding message: ', e);
     })
   }
+
+  $scope.closeAlert = function(index) {
+    $scope.show = false;
+  };
 
 }]);
 
@@ -103,13 +125,29 @@ angular.module('myapp')
       console.log('Logged in as:', authData.facebook);
       var userRef = new Firebase('https://sportwarssms.firebaseio.com/members/' + authData.uid);
       var newUser = $firebaseObject(userRef);
-      newUser.name = $scope.user.displayName;
-      newUser.$save().then(function() {
-        console.log('User successfully added');
-        $location.path('/lobby');
-      }).catch(function() {
-        console.log('Adding the user encountered an error');
+      newUser.$loaded(function(data) {
+        console.log(data);
+        if(data.badges == null) {
+          newUser.name = $scope.user.displayName;
+          newUser.badges = {
+            'referralstar': false,
+            'closer': false,
+            'champion': false,
+            'fatwallet': false,
+            'registry': false,
+            'underdog': false
+          };
+          console.log('added data');
+        };
+
+        newUser.$save().then(function() {
+          console.log('User successfully added');
+          $location.path('/lobby');
+        }).catch(function() {
+          console.log('Adding the user encountered an error');
+        });
       });
+
     }).catch(function(error) {
       console.error('Authentication failed:', error);
     });
@@ -143,7 +181,7 @@ angular.module('myapp')
 }]);
 
 angular.module('myapp')
-.controller('ProfileCtrl', ["$scope", "$firebaseAuth", "$location", function($scope, $firebaseAuth, $location) {
+.controller('ProfileCtrl', ["$scope", "$firebaseAuth", "$location", "$firebaseObject", function($scope, $firebaseAuth, $location, $firebaseObject) {
   var ref = new Firebase('https://sportwarssms.firebaseio.com');
   $scope.authObj = $firebaseAuth(ref);
 
@@ -151,6 +189,14 @@ angular.module('myapp')
     if (authData) {
       $scope.user = authData.facebook.displayName;
       console.log("Logged in as:", authData.uid);
+
+      var userRef = new Firebase('https://sportwarssms.firebaseio.com/members/' + authData.uid);
+      var user = $firebaseObject(userRef);
+
+      user.$loaded(function(data) {
+        $scope.badges = data.badges;
+        console.log($scope.badges);
+      });
     } else {
       console.log("Logged out");
       $scope.user = false;
