@@ -1,5 +1,5 @@
 angular.module('myapp')
-.controller('HomeCtrl', function($scope, $firebaseAuth, $location) {
+.controller('HomeCtrl', function($scope, $firebaseAuth, $location, $firebaseObject) {
   var ref = new Firebase('https://sportwarssms.firebaseio.com');
   $scope.authObj = $firebaseAuth(ref);
 
@@ -16,10 +16,19 @@ angular.module('myapp')
   $scope.loginFacebook = function() {
     $scope.authObj.$authWithOAuthPopup('facebook').then(function(authData) {
       $scope.user = authData.facebook;
-      console.log('Logged in as:', authData);
-      $location.path('/lobby');
+      console.log('Logged in as:', authData.facebook);
+      var userRef = new Firebase('https://sportwarssms.firebaseio.com/members/' + authData.uid);
+      var newUser = $firebaseObject(userRef);
+      newUser.name = $scope.user.displayName;
+      newUser.$save().then(function() {
+        console.log('User successfully added');
+        $location.path('/lobby');
+      }).catch(function() {
+        console.log('Adding the user encountered an error');
+      });
     }).catch(function(error) {
       console.error('Authentication failed:', error);
     });
   }
+
 });

@@ -25,6 +25,7 @@
 html, body {
   font: 62.5%/1.4 'Open Sans', Helvetica, sans-serif;
   max-width: 100%;
+  background: #e9e9e9;
 }
 h1, h2, h3, h4, h5 {
   font-family: 'Promesh';
@@ -75,14 +76,14 @@ a:link, a:visited {
  }
  nav.row ul > li {
    font-family: 'Promesh';
-   margin-top: 2.2rem;
+   margin-top: 2.4rem;
    display: inline-block;
    margin-left: 2rem;
  }
  nav.row button.btn {
    margin-bottom: .7rem;
    background: none;
-   font-size: 2.2rem;
+   font-size: 2.4rem;
    border: none;
    color: #e9e9e9;
  }

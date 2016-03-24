@@ -46,9 +46,9 @@
       <tbody>
         <tr class='row' ng-repeat='contest in list'>
           <td>{{ contest.gameData.name }}</td>
-          <td>{{ contest.gameData.size }}</td>
-          <td>{{ contest.gameData.prizes }}</td>
-          <td>{{ contest.gameData.entry }}</td>
+          <td>{{ contest.gameData.size | number }}</td>
+          <td>{{ contest.gameData.prizes | currency }}</td>
+          <td>{{ contest.gameData.entry | currency }}</td>
           <td>{{ contest.gameData.start }}</td>
           <td><button><a ng-href='/contest/{{ contest.$id }}'>Play</a></button></td>
         </tr>
