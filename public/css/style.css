@@ -384,31 +384,11 @@ footer ul:last-child li:first-child {
 }
 footer ul:last-child li:nth-child(2) {
   font-family: 'Promesh';
-  margin-bottom: 2rem;
 }
-footer ul:last-child li:nth-child(n+3) {
-  display: inline-block;
-  height: 3rem;
-  width: 3rem;
-  border-radius: 50%;
-  margin-left: .5rem;
+footer div.fb-share-button {
+  margin: 2rem 0;
 }
-footer ul:last-child li:nth-child(n+3):hover {
-  cursor: pointer;
-}
-footer ul:last-child li:nth-child(n+3) span {
-  display: none;
-}
-footer ul:last-child li:nth-child(3) {
-  background: url('../assets/images/fb.png') no-repeat center center;
-}
-footer ul:last-child li:nth-child(4) {
-  background: url('../assets/images/tw.png') no-repeat center center;
-}
-footer ul:last-child li:nth-child(5) {
-  background: url('../assets/images/ig.png') no-repeat center center;
-}
-footer div:last-child {
+footer div.row:last-child {
   margin: 3rem 0 0;
   font-size: 1.4rem;
 }

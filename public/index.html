@@ -1,7 +1,7 @@
 <html ng-app='myapp'>
   <head>
     <base href='/'></base>
-    <title>App</title>
+    <title>Sportwars: Daily Fantasy Sports</title>
     <!--Stylesheets-->
     <link rel='stylesheet' href='bower/bootstrap/dist/css/bootstrap.min.css' />
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
@@ -10,6 +10,11 @@
     <meta lang='en'>
     <meta charset='utf-8'>
     <meta name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no'>
+    <meta property="og:url"           content="https://sportwarssms.firebaseapp.com" />
+    <meta property="og:type"          content="website" />
+    <meta property="og:title"         content="SportWars: Daily Fantasy Sports" />
+    <meta property="og:description"   content="Sportwars is a daily fantasy sports website." />
+    <meta property="og:image"         content="https://sportwarssms.firebaseapp.com/assets/images/sportwars_logo.svg" />
     <!--Scripts-->
     <script src='bower/jquery/dist/jquery.js'></script>
     <script src='bower/angular/angular.min.js'></script>
@@ -45,9 +50,20 @@
         <ul class='col-xs-3 text-right'>
           <li>Sportwars Inc.</li>
           <li>Orlando, Fl</li>
-          <li><span>Facebook</span></li>
-          <li><span>Twitter</span></li>
-          <li><span>Instagram</span></li>
+          <div id="fb-root"></div>
+        	<script>
+            (function(d, s, id) {
+    	        var js, fjs = d.getElementsByTagName(s)[0];
+  	          if (d.getElementById(id)) return;
+	            js = d.createElement(s); js.id = id;
+	            js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5";
+	            fjs.parentNode.insertBefore(js, fjs);
+  	        }(document, 'script', 'facebook-jssdk'));
+          </script>
+          <div class="fb-share-button"
+      		data-href="https://sportwarssms.firebaseapp.com"
+      		data-layout="button_count">
+        	</div>
         </ul>
       </div>
       <div class='row'>
