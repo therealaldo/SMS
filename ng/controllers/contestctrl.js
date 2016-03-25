@@ -14,7 +14,6 @@ function($scope, $firebaseAuth, $location, $routeParams, $firebaseArray, $fireba
   $scope.authObj.$onAuth(function(authData) {
     if (authData) {
       $scope.user = authData.facebook.displayName;
-      console.log("Logged in as:", authData.uid);
 
       $scope.game = contestData;
       $scope.messages = msgData;
@@ -27,11 +26,9 @@ function($scope, $firebaseAuth, $location, $routeParams, $firebaseArray, $fireba
 
       user.$loaded(function(data) {
         if(data.badges.champion == false && contestData[0].featured == true) {
-          console.log(data.badges);
           user.badges.champion = true;
 
           user.$save().then(function(data) {
-            console.log('Badge was successfully changed.');
             $scope.show = true;
           }).catch(function() {
             console.log('Badge was unsuccessfully changed.');
@@ -48,7 +45,6 @@ function($scope, $firebaseAuth, $location, $routeParams, $firebaseArray, $fireba
 
   $scope.addMessage = function() {
     msgData.$add($scope.newMessage).then(function() {
-      console.log('Message successfully added');
       $scope.newMessage.text = '';
     }).catch(function(e) {
       console.log('Error adding message: ', e);
