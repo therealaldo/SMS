@@ -1,6 +1,6 @@
 <header class='container-fluid'>
   <nav class='row'>
-    <p class='col-xs-3'><a href='/' class='logo'>Sportwars</a></p>
+    <p class='col-xs-3'><a href='/lobby' class='logo'>Sportwars</a></p>
     <ul class='col-xs-3 col-xs-offset-6 text-right'>
       <li><a href='/lobby'>Lobby</a></li>
       <li class='dropdown'>
@@ -83,12 +83,12 @@
   </section>
   <section class='row'>
     <section class='trashtalk col-lg-6'>
-      <h3 class='col-xs-12'>Trash Talk</h3>
-      <div class='chat col-xs-10 col-xs-offset-1' ng-scroll-bottom='messages'>
+      <h3 class='col-xs-12 text'>Trash Talk</h3>
+      <div class='chat col-xs-12' ng-scroll-bottom='messages'>
         <p ng-if='messages == false'>There's no messages currently. Talk some trash!</p>
         <p ng-if='messages' ng-repeat='message in messages'><strong>{{ message.username }}: </strong>{{ message.text }}<p>
       </div>
-      <form class='msginput col-xs-10 col-xs-offset-1' ng-submit='addMessage()'>
+      <form class='msginput col-xs-12' ng-submit='addMessage()'>
         <input type='text' name='userMessage' ng-model='newMessage.text' />
       </form>
     </section>
